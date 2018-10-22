@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\Int32Ex.cs" />
+    <Compile Include="Helper\Node.cs" />
     <Compile Include="List\ILinearList.cs" />
+    <Compile Include="List\SiLinkedList.cs" />
     <Compile Include="List\SeqList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
