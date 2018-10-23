@@ -7,7 +7,7 @@ namespace Z1DataStructAlgorithm.Stack
         public int MaxSize { get; set; }
         public int Top { get; private set; }
 
-        private T[] _data;
+        private readonly T[] _data;
 
         public SeqStack(int size)
         {
