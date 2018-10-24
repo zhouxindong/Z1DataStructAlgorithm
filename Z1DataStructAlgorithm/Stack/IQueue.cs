@@ -4,6 +4,7 @@
     {
         int GetLength();
         bool IsEmpty();
+        bool IsFull();
         IQueue<T> Clear();
         IQueue<T> In(T item);
         T Out();
