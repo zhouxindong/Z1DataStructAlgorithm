@@ -48,6 +48,7 @@
     <Compile Include="Stack\CSeqQueue.cs" />
     <Compile Include="Stack\IQueue.cs" />
     <Compile Include="Stack\IStack.cs" />
+    <Compile Include="Stack\LinkedQueue.cs" />
     <Compile Include="Stack\LinkedStack.cs" />
     <Compile Include="Stack\SeqStack.cs" />
   </ItemGroup>
