@@ -51,6 +51,7 @@
     <Compile Include="Stack\LinkedQueue.cs" />
     <Compile Include="Stack\LinkedStack.cs" />
     <Compile Include="Stack\SeqStack.cs" />
+    <Compile Include="Tree\BiTreeNode.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
