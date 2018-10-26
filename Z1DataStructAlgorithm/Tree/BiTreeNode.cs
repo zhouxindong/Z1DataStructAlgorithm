@@ -6,14 +6,14 @@
         public BiTreeNode<T> LeftChild { get; set; }
         public BiTreeNode<T> RightChild { get; set; }
 
-        public BiTreeNode(T val, BiTreeNode<T> lp, BiTreeNode<T> rp)
+        public BiTreeNode(T val, BiTreeNode<T> left_child, BiTreeNode<T> right_child)
         {
             Data = val;
-            LeftChild = lp;
-            RightChild = rp;
+            LeftChild = left_child;
+            RightChild = right_child;
         }
 
-        public BiTreeNode(BiTreeNode<T> lp, BiTreeNode<T> rp) : this(default(T), lp, rp)
+        public BiTreeNode(BiTreeNode<T> left_child, BiTreeNode<T> right_child) : this(default(T), left_child, right_child)
         {
         }
 

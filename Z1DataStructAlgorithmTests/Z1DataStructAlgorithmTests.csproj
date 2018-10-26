@@ -55,6 +55,7 @@
     <Compile Include="List\SeqListTests.cs" />
     <Compile Include="List\SiLinkedListTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree\BiTreeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Z1DataStructAlgorithm\Z1DataStructAlgorithm.csproj">
