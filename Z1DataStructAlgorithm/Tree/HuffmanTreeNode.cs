@@ -1,20 +1,25 @@
-﻿namespace Z1DataStructAlgorithm.Tree
-{
-    public class HuffmanTreeNode
-    {
-        public int Weight { get; set; }
-        public int LeftChild { get; set; }
-        public int RightChild { get; set; }
-        public int Parent { get; set; }
+﻿using System;
 
-        public HuffmanTreeNode(int weight, int left_child, int right_child, int parent)
+namespace Z1DataStructAlgorithm.Tree
+{
+    public class HuffmanTreeNode<T> : BiTreeNode<T>
+        where T : IComparable<T>
+    {
+        public HuffmanTreeNode(
+            T weight,
+            BiTreeNode<T> left_child,
+            BiTreeNode<T> right_child,
+            BiTreeNode<T> parent) : base(weight, left_child, right_child)
         {
-            Weight = weight;
-            LeftChild = left_child;
-            RightChild = right_child;
             Parent = parent;
         }
 
-        public HuffmanTreeNode() : this(0, -1, -1, -1) { }
+        public HuffmanTreeNode() : this(default(T), null, null, null)
+        {
+        }
+
+        public HuffmanTreeNode(T weight) : this(weight, null, null, null)
+        {
+        }
     }
 }

@@ -5,6 +5,7 @@
         public T Data { get; set; }
         public BiTreeNode<T> LeftChild { get; set; }
         public BiTreeNode<T> RightChild { get; set; }
+        public BiTreeNode<T> Parent { get; set; }
 
         public BiTreeNode(T val, BiTreeNode<T> left_child, BiTreeNode<T> right_child)
         {
@@ -24,7 +25,5 @@
         public BiTreeNode() : this(default(T), null, null)
         {
         }
-
-
     }
 }
