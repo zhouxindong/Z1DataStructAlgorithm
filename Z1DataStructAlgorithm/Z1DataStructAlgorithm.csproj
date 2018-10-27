@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graph\GraphNode.cs" />
     <Compile Include="Helper\Int32Ex.cs" />
     <Compile Include="Helper\Node.cs" />
     <Compile Include="List\ILinearList.cs" />
