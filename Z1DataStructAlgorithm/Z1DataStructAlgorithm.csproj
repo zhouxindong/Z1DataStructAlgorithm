@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graph\GraphAdjMatrix.cs" />
     <Compile Include="Graph\GraphNode.cs" />
     <Compile Include="Graph\IGraph.cs" />
     <Compile Include="Helper\Int32Ex.cs" />
