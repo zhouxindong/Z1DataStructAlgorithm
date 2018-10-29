@@ -43,6 +43,7 @@
     <Compile Include="Graph\GraphAdjMatrix.cs" />
     <Compile Include="Graph\GraphNode.cs" />
     <Compile Include="Graph\IGraph.cs" />
+    <Compile Include="Graph\VexNode.cs" />
     <Compile Include="Helper\Int32Ex.cs" />
     <Compile Include="Helper\Node.cs" />
     <Compile Include="List\ILinearList.cs" />
