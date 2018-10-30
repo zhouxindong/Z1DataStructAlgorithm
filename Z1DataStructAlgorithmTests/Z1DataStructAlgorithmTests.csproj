@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Graph\GraphAdjListTests.cs" />
     <Compile Include="Helper\Int32ExTests.cs" />
     <Compile Include="List\SeqListTests.cs" />
     <Compile Include="List\SiLinkedListTests.cs" />
