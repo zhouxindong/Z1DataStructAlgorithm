@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 
 namespace Z1DataStructAlgorithm.Graph
@@ -8,12 +10,14 @@ namespace Z1DataStructAlgorithm.Graph
     {
         private GraphNode<T>[] _nodes;
         private int[,] _matrix;
+        private int[] _degrees;
 
         public int NumEdges { get; set; }
 
         public GraphAdjMatrix(int n)
         {
             _nodes = new GraphNode<T>[n];
+            _degrees = new int[n];
             _matrix = new int[n, n];
             NumEdges = 0;
         }
@@ -45,6 +49,13 @@ namespace Z1DataStructAlgorithm.Graph
             return NumEdges;
         }
 
+        public int GetDegree(GraphNode<T> node)
+        {
+            if (!IsNode(node))
+                return -1;
+            return _degrees[GetIndex(node)];
+        }
+
         public bool IsNode(GraphNode<T> v)
         {
             return _nodes.Contains(v);
@@ -69,6 +80,8 @@ namespace Z1DataStructAlgorithm.Graph
                 throw new InvalidOperationException("Not undirection graph");
             this[GetIndex(v1), GetIndex(v2)] = v;
             this[GetIndex(v2), GetIndex(v1)] = v;
+            _degrees[GetIndex(v1)]++;
+            _degrees[GetIndex(v2)]++;
             ++NumEdges;
         }
 
@@ -80,6 +93,8 @@ namespace Z1DataStructAlgorithm.Graph
                 return;
             this[GetIndex(v1), GetIndex(v2)] = 0;
             this[GetIndex(v2), GetIndex(v1)] = 0;
+            _degrees[GetIndex(v1)]--;
+            _degrees[GetIndex(v2)]--;
             --NumEdges;
         }
 
@@ -88,6 +103,22 @@ namespace Z1DataStructAlgorithm.Graph
             if (!IsNode(v1) || !IsNode(v2))
                 throw new InvalidOperationException("v1 or v2 not belongs to Graph");
             return this[GetIndex(v1), GetIndex(v2)] == 1;
+        }
+
+        public static GraphAdjMatrix<T> Build(IEnumerable<GraphNode<T>> nodes,
+            IEnumerable<Tuple<GraphNode<T>, GraphNode<T>>> edges)
+        {
+            var graph = new GraphAdjMatrix<T>(nodes.Count());
+            int index = 0;
+            foreach (var node in nodes)
+            {
+                graph[index++] = node;
+            }
+            foreach (var edge in edges)
+            {
+                graph.SetEdge(edge.Item1, edge.Item2, 1);
+            }
+            return graph;
         }
     }
 }
