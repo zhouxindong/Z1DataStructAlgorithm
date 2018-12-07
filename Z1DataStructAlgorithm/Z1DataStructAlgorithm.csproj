@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graph2\UndirectedEdge.cs" />
+    <Compile Include="Graph2\UndirectedGraph.cs" />
     <Compile Include="Graph\AdjListNode.cs" />
     <Compile Include="Graph\GraphAdjList.cs" />
     <Compile Include="Graph\GraphAdjMatrix.cs" />
@@ -64,9 +66,7 @@
     <Compile Include="Tree\HuffmanTreeNode.cs" />
     <Compile Include="Tree\IWeightMerge.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Graph2\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
