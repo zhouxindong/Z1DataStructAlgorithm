@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graph2\DirectedEdge.cs" />
+    <Compile Include="Graph2\DirectedGraph.cs" />
+    <Compile Include="Graph2\MinDistanceRoute.cs" />
     <Compile Include="Graph2\UndirectedEdge.cs" />
     <Compile Include="Graph2\UndirectedGraph.cs" />
     <Compile Include="Graph\AdjListNode.cs" />

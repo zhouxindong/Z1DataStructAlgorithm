@@ -45,6 +45,10 @@ namespace Z1DataStructAlgorithm.Graph2
         public UndirectedGraph<T> Add(UndirectedEdge<T> edge)
         {
             _edges.Add(edge);
+            foreach (var vertex in edge.Vertexs())
+            {
+                _vertexs.Add(vertex);
+            }
             return this;
         }
 
