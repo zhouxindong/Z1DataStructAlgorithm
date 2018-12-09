@@ -11,6 +11,11 @@ namespace Z1DataStructAlgorithm.List
     {
         private readonly T[] _data;
 
+        public T[] Data
+        {
+            get { return _data; }
+        }
+
         public int Last { get; private set; }
         public int MaxSize { get; set; }
 
@@ -19,6 +24,12 @@ namespace Z1DataStructAlgorithm.List
             _data = new T[size];
             MaxSize = size;
             Last = -1;
+        }
+
+        public T this[int index]
+        {
+            get { return GetElem(index); }
+            set { SetElem(index, value); }
         }
 
         public int GetLength()
@@ -120,6 +131,17 @@ namespace Z1DataStructAlgorithm.List
                 throw new IndexOutOfRangeException(nameof(index));
 
             return _data[index];
+        }
+
+        public void SetElem(int index, T value)
+        {
+            if (IsEmpty())
+                throw new InvalidOperationException("Empty");
+
+            if (!index.InRange(0, Last))
+                throw new IndexOutOfRangeException(nameof(index));
+
+            _data[index] = value;
         }
 
         public int Locate(T value)

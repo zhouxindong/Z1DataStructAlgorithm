@@ -57,6 +57,7 @@
     <Compile Include="List\SiLinkedList.cs" />
     <Compile Include="List\SeqList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sort\SimpleSort.cs" />
     <Compile Include="Stack\CSeqQueue.cs" />
     <Compile Include="Stack\IQueue.cs" />
     <Compile Include="Stack\IStack.cs" />
